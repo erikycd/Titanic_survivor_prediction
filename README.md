@@ -21,3 +21,6 @@ Basically, the process involves:
 
 ### Test data description
 ![test](Test_desc.png "Test data description")
+
+### Feature correlation graph
+![correlation](Pearson_correlation_features.png)

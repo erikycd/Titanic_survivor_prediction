@@ -4,7 +4,7 @@
 
 From the classic Titanic machine learning (ML) competition on [Kaggle](https://www.kaggle.com/c/titanic/overview) website. The very first steps to dive into ML competitions and familiarize with prediction systems.
 
-The approach shown here makes use of classic ML techniques to create a model that predicts which passengers survived the Titanic shipwreck. 
+The approach shown here makes use of classic ML techniques to create a model that predicts which passengers survived the Titanic shipwreck. [Python file](Titanic_eng.py). 
 
 Basically, the process involves:
 
@@ -31,4 +31,8 @@ The feature correlation map shows if there exists any statistical association be
 
 <img src="Pearson_correlation_features.png" alt="correlation" width="450"/>
 
+### Classification results with sklearn library
+Different classification methods were applied in the training set.
+
+<img src="Class_results.png" alt="classification" width="200"/>
 

@@ -16,4 +16,8 @@ Basically, the process involves:
     * Data normalization and scaling
     * Automatic classification
 
+### Train data description
+![train](Training_desc.png "Train data description")
 
+### Test data description
+![test](Test_desc.png "Test data description")

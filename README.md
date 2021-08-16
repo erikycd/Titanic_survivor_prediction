@@ -16,11 +16,17 @@ Basically, the process involves:
     * Data normalization and scaling
     * Automatic classification
 
-### Train data description
+### Training data description.
+Composed of 891 rows with individual information each that includes: PassengerID, Survived value, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin and Embarked.
+
 ![train](Training_desc.png "Train data description")
 
 ### Test data description
+Composed of 418 rows with individual information each that includes: PassengerID, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin and Embarked.
+
 ![test](Test_desc.png "Test data description")
 
-### Feature correlation graph
-![correlation](Pearson_correlation_features.png)
+### Feature correlation map
+The feature correlation map shows if there exists any statistical association between two variables. The closer value to 1 or -1, the higher the correlation.
+
+<img src="Pearson_correlation_features.png" alt="correlation" width="450"/>

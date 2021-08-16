@@ -8,11 +8,12 @@ The approach shown here makes use of classic ML techniques to create a model tha
 
 Basically, the process involves:
 
-    * Data cleaning
-    * Age prediction
     * Feature engineering
-    * Data normalization
-    * Support vector machine classifier
-
+      * Data analysis
+      * Age prediction
+      * Fares estimation
+    * Data cleaning
+    * Data normalization and scaling
+    * Automatic classification
 
 

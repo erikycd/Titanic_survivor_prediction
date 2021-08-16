@@ -32,8 +32,3 @@ The feature correlation map shows if there exists any statistical association be
 <img src="Pearson_correlation_features.png" alt="correlation" width="450"/>
 
 
-### Feature correlation map
-The feature correlation map shows if there exists any statistical association between two variables. The closer value to 1 or -1, the higher the correlation. For instance, Survived feature is highly correlated to Pclass and Fares
-
-<img src="Pearson_correlation_features.png" alt="correlation" width="450"/>
-

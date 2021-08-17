@@ -26,10 +26,19 @@ Composed of 418 rows with individual information each that includes: PassengerID
 
 ![test](Test_desc.png "Test data description")
 
+### Unbalanced data sorted by Sex vs Survived
+
+<img src="Rate_genre_1.png" alt="unbalanced" width="450"/>
+
 ### Feature correlation map
 The feature correlation map shows if there exists any statistical association between two variables. The closer value to 1 or -1, the higher the correlation. For instance, Survived feature is highly correlated to Pclass and Fares
 
 <img src="Pearson_correlation_features.png" alt="correlation" width="450"/>
+
+### Feature correlation map after preprocessing
+Now, survived feature is highly correlated to Pclass and Sex
+
+<img src="Pearson_correlation_features_2.png" alt="correlation" width="450"/>
 
 ### Classification results with sklearn library
 Different classification methods were applied in the training set.

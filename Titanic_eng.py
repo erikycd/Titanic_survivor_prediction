@@ -169,49 +169,49 @@ X_norm = preprocessing.normalize(X)
 y = np.array(df_train['Survived'])
 
 # Data split
-X_train, X_test, y_train, y_test = train_test_split(X_norm, y, test_size=0.2)
+X_train, X_valid, y_train, y_valid = train_test_split(X_norm, y, test_size=0.2)
 
 #%% Automatic clasificacion
 
 model_Gauss = GaussianNB()
 model_Gauss.fit(X_train, y_train);
-y_predict_Gauss = model_Gauss.predict(X_test)
-print('Clasificador Gaussian Naive Bayes:')
-print(model_Gauss.score(X_train,y_train))
+y_predict_Gauss = model_Gauss.predict(X_valid)
+print('Gaussian Naive Bayes:')
+print(model_Gauss.score(X_valid,y_valid))
 
 model_logreg = LogisticRegression()
 model_logreg.fit(X_train, y_train);
-y_predict_logreg = model_logreg.predict(X_test)
-print('Clasificador Regresion Logistica:')
-print(model_logreg.score(X_train,y_train))
+y_predict_logreg = model_logreg.predict(X_valid)
+print('Logistic Regression:')
+print(model_logreg.score(X_valid,y_valid))
 
 model_svm = SVC()
 model_svm.fit(X_train, y_train);
-y_predict_svm = model_svm.predict(X_test)
-print('Clasificador SMV:')
-print(model_svm.score(X_train,y_train))
+y_predict_svm = model_svm.predict(X_valid)
+print('SMV Classifier:')
+print(model_svm.score(X_valid,y_valid))
 
 model_randomF = RandomForestClassifier(n_estimators=100,max_depth=5,random_state=1)
 model_randomF.fit(X_train, y_train);
-y_predict_randomF = model_randomF.predict(X_test)
-print('Clasificador Random Forest:')
-print(model_randomF.score(X_train,y_train))
+y_predict_randomF = model_randomF.predict(X_valid)
+print('Random Forest:')
+print(model_randomF.score(X_valid,y_valid))
 
 model_dectree = DecisionTreeClassifier(criterion='entropy',random_state=0)
 model_dectree.fit(X_train, y_train);
-y_predict_dectree = model_dectree.predict(X_test)
-print('Clasificador Decision Tree')
-print(model_dectree.score(X_train,y_train))
+y_predict_dectree = model_dectree.predict(X_valid)
+print('Decision Tree:')
+print(model_dectree.score(X_valid,y_valid))
 
 #%% Displaying results of training classification
 
-Res_Gauss = model_Gauss.score(X_train,y_train)
-Res_Logis = model_logreg.score(X_train,y_train)
-Res_SVM = model_svm.score(X_train,y_train)
-Res_RandomF = model_randomF.score(X_train,y_train)
-Res_DesT = model_dectree.score(X_train,y_train)
+Res_Gauss = model_Gauss.score(X_valid,y_valid)
+Res_Logis = model_logreg.score(X_valid,y_valid)
+Res_SVM = model_svm.score(X_valid,y_valid)
+Res_RandomF = model_randomF.score(X_valid,y_valid)
+Res_DesT = model_dectree.score(X_valid,y_valid)
 
-Algorithms = ['Naive Bayes','Regression','SVM','Random Forest','Decision Tree']
+Algorithms = ['Naive Bayes','Linear Regression','SVM','Random Forest','Decision Tree']
 Results = [Res_Gauss, Res_Logis, Res_SVM, Res_RandomF, Res_DesT]
 Table_results = pd.DataFrame(Results, Algorithms, columns = ['Results'])
 
